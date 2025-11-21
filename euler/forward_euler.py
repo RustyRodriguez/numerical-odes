@@ -1,10 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def euler(f, x0, y0, h, n):
+def forward_euler(f, x0, y0, h, n):
     x_vals = [x0]
     y_vals = [y0]
+
     x, y = x0, y0
+    
     for _ in range(n):
         y = y + h * f(x, y)
         x = x + h
